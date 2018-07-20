@@ -7,11 +7,6 @@
 			"matches": ["https://*.youtube.com/*"],
 			"run_at": "document_idle",
 			"js": ["homepageRemover.js"]
-		},
-		{
-			"matches": ["https://*.youtube.com/watch*"],
-			"run_at": "document_idle",
-			"js": ["nextToWatchRemover.js"]
 		}
 	],
 	"permissions": ["activeTab"],
