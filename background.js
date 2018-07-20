@@ -1,0 +1,1 @@
+// Background js is empty for now

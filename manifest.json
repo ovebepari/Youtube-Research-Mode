@@ -1,0 +1,20 @@
+{
+	"name": "Youtube - Research Mode",
+	"version": "0.1",
+	"description": "Don't distract yourself",
+	"content_scripts":[
+		{
+			"matches": ["https://*.youtube.com/*"],
+			"run_at": "document_idle",
+			"js": ["homepageRemover.js"]
+		},
+		{
+			"matches": ["https://*.youtube.com/watch*"],
+			"run_at": "document_idle",
+			"js": ["nextToWatchRemover.js"]
+		}
+	],
+	"permissions": ["activeTab"],
+	"manifest_version": 2
+
+}
