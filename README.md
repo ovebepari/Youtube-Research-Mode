@@ -7,4 +7,8 @@
 
 ## Screenshots: 
 
+#### Homepage (contains nothing except search box and navigations):
 ![First Screenshot](img/sc-one.png)
+
+#### Video View Page (contains no other recommended videos):
+![First Screenshot](img/sc-two.png)
