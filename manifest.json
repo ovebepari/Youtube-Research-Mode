@@ -2,6 +2,14 @@
 	"name": "Youtube - Research Mode",
 	"version": "0.1",
 	"description": "Don't distract yourself",
+	"page_action":{
+		"default_icon": {
+			"16": "img/yt-logo.png",
+			"32": "img/yt-logo.png",
+			"48": "img/yt-logo.png",
+			"128": "img/yt-logo.png"
+		}
+	},
 	"content_scripts":[
 		{
 			"matches": ["https://*.youtube.com/*"],
@@ -9,6 +17,12 @@
 			"js": ["homepageRemover.js"]
 		}
 	],
+	"icons": {
+			"16": "img/yt-logo.png",
+			"32": "img/yt-logo.png",
+			"48": "img/yt-logo.png",
+			"128": "img/yt-logo.png"
+	},
 	"permissions": ["activeTab"],
 	"manifest_version": 2
 
