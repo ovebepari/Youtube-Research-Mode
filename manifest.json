@@ -1,29 +1,56 @@
 {
-	"name": "Youtube - Research Mode",
-	"version": "0.1",
-	"description": "Don't distract yourself",
-	"page_action":{
-		"default_icon": {
-			"16": "img/yt-logo.png",
-			"32": "img/yt-logo.png",
-			"48": "img/yt-logo.png",
-			"128": "img/yt-logo.png"
+	"applications": {
+		"gecko": {
+			"id": "ovebepari@gmail.com",
+			"strict_min_version": "42.0"
 		}
 	},
-	"content_scripts":[
-		{
-			"matches": ["https://*.youtube.com/*"],
-			"run_at": "document_idle",
-			"js": ["homepageRemover.js"]
-		}
-	],
-	"icons": {
-			"16": "img/yt-logo.png",
-			"32": "img/yt-logo.png",
-			"48": "img/yt-logo.png",
-			"128": "img/yt-logo.png"
-	},
-	"permissions": ["activeTab"],
-	"manifest_version": 2
 
+	"browser_action": {
+		"default_icon": {
+			"19": "img/yt-logo.png",
+			"38": "img/yt-logo.png"
+		},
+		"default_title": "YT Research Mode"
+	},
+
+	"commands": {
+		"toggle-feature": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+Y",
+				"linux": "Ctrl+Shift+Y"
+			},
+			"description": "Send a 'toggle-feature' event"
+		}
+	},
+
+	"content_security_policy": "script-src 'self' https://example.com; object-src 'self'",
+
+	"content_scripts": [{
+		"matches": ["*://*.youtube.com/*"],
+		"js": ["homepageRemover.js"]
+	}],
+
+	"description": "Youtube Research Mode",
+
+	"icons": {
+		"48": "img/yt-logo.png",
+		"96": "img/yt-logo.png"
+	},
+
+	"manifest_version": 2,
+
+	"name": "Youtube Research Mode",
+
+	"page_action": {
+		"default_icon": {
+			"19": "img/yt-logo.png",
+			"38": "img/yt-logo.png"
+		},
+		"default_title": "Youtube Research Mode",
+		"default_popup": ""
+	},
+
+	"permissions": ["webNavigation", "tabs"],
+	"version": "0.1"
 }
